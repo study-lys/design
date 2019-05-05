@@ -1,0 +1,329 @@
+/**
+* 主题颜色设定
+* Author: liyinsheng
+* Date: 2019/4/14
+* Time: 16:56
+* Email:cq_liyinsheng@163.com
+*/
+@import "../colors/colors";
+
+// 通用文本颜色
+.theme-font {
+  color: $color-font-middle-black !important;
+}
+.theme-font-white{
+  color: $color-font-white !important;
+}
+
+// 内容区域背景色
+.theme-content{
+  background-color: $color-block-gray;
+}
+
+// 当前登录用户名
+.theme-user {
+  font-size: .22rem;
+  display: inline-block;
+  margin: .1rem 0;
+  color: $color-font-gray !important;
+  //color: $color-primary !important;
+}
+
+// 侧边栏
+.theme-side {
+  background-color: $color-block-shallow-grey !important;
+  .el-menu{
+    border: none;
+    box-sizing: border-box;
+    background-color: $color-block-shallow-grey !important;
+    .el-submenu__title{
+      height: .6rem;
+      line-height: .6rem;
+      color: $color-font-white !important;
+      *{
+        font-size: .22rem!important;
+      }
+    }
+    .el-menu-item{
+      height: .5rem;
+      line-height: .5rem;
+      font-size: .2rem!important;
+      color: $color-font-white !important;
+    }
+    *:hover{
+      background-color: rgb(64,74,80) !important;
+    }
+    .side_lib_active{
+      color: #ffd04b !important;
+    }
+  }
+}
+
+// 边框
+.theme-border {
+  //background-color: rgb(84,92,100);
+  border: 1px solid $color-border-middle-grey;
+  //color: $color-primary !important;
+}
+
+// 按钮
+.el-button{
+  padding: .08rem .22rem!important;
+}
+
+// header
+.theme-header{
+  background-color: $color-primary-header;
+  cursor:pointer;
+  padding: .15rem 0;
+  font-size: .22rem;
+  font-weight: 400;
+  text-align: center;
+  &:hover{
+    background-color: $color-primary-header-hover;
+  }
+}
+
+// footer
+.theme-footer{
+  color: $color-primary-header;
+  background-color: $color-block-middle-gray;
+  cursor:pointer;
+  padding: .1rem .2rem;
+  font-weight: 400;
+  text-align: right;
+}
+
+// table 通用
+.theme-table {
+  width: 100%;
+  font-size: .18rem;
+  background-color: transparent !important;
+  table{
+    border-collapse:collapse
+  }
+  .el-table__body-wrapper table.el-table__body tbody tr {
+    td {
+      font-size: .18rem;
+      padding: .12rem 0;
+      color: $color-font-middle-black !important;
+      .cell {
+        white-space: nowrap;
+      }
+    }
+  }
+  &.el-table.el-table--fit.el-table--enable-row-hover:before {
+    display: none;
+  }
+}
+
+// 图表header颜色
+.theme-table-header {
+  background-color: $color-primary !important;
+  color: $color-font-white;
+
+  th {
+    font-size: .18rem;
+    border: none !important;
+    background: transparent !important;
+
+    .cell {
+      white-space: nowrap;
+    }
+
+    &.is-leaf {
+      padding: .12rem 0;
+    }
+  }
+
+  td {
+    font-size: .18rem;
+
+    .cell {
+      white-space: nowrap !important;
+    }
+  }
+}
+
+// 表格提示框
+.el-tooltip__popper{
+  background-color: $color-primary!important
+}
+
+// element ui 模态框
+.el-dialog {
+  &__headerbtn{
+    top:.26rem!important;
+  }
+  &__header {
+    //background: $theme-el-dialog-bg-color;
+    padding: .2rem .2rem .15rem .15rem!important;
+    background-color: $color-primary;
+    line-height: 0;
+    span{
+      font-size: .22rem;
+      color: $color-font-white;
+    }
+    .el-icon{
+      color: $color-font-white!important;
+    }
+  }
+
+  &__body {
+    padding: .22rem!important;
+  }
+
+  &__footer {
+    padding: .18rem!important;
+    border-top: 1px solid $color-border-middle-grey;
+    line-height: 0;
+    .el-button.el-button--default{
+      font-size: .18rem !important;
+      color: $color-font-middle-black!important;
+      background: $color-block-white!important;
+      opacity: 0.9;
+      &:hover,&:active,&:focus{
+        opacity: 0.8;
+      }
+    }
+    .el-button.el-button--primary{
+      background:$color-primary-header ;
+      font-size: .18rem !important;
+      //border: 1px solid $color-primary-header!important;
+      &:hover,&:active,&:focus{
+        //background:$color-primary-header-hover!important;
+      }
+    }
+  }
+}
+
+// 边框checkbox
+.el-checkbox__input.is-checked,.el-checkbox__input.is-indeterminate {
+  span.el-checkbox__inner {
+    background: $color-primary!important;
+    border-color: $color-primary;
+  }
+}
+
+// 输入框
+.el-input{
+  //&__inner,
+  //&-group__append{
+  //  //color: $color-font-middle-black!important;
+  //  //border: 1px solid $color-primary!important;
+  //  //background: $color-block-gray!important;
+  //}
+  //&-group__append{
+  //  border-left: none;
+  //}
+}
+
+// 分页背景色--透明
+.theme-page-bgn{
+  .number,.el-icon{
+    color: $color-font-middle-black!important;;
+    background-color: unset !important;
+    &:hover{
+      color: $color-primary!important;
+    }
+  }
+  &/deep/.active{
+    color: $color-font-white!important;
+    background-color: $color-primary!important;
+    &:hover{
+      color: $color-font-white!important;
+    }
+  }
+}
+
+// 分页文本色
+.theme-page-font{
+  &/deep/.el-pagination__total{
+    color: $color-font-middle-black;
+  }
+  &/deep/.el-pagination__jump{
+    color:$color-font-middle-black;
+  }
+}
+
+// 文本框
+.el-textarea{
+  textarea{
+    resize:none;
+  }
+}
+
+//通用message-box
+.el-message-box{
+  padding: 0!important;
+  width: 5.5rem!important;
+  &__header{
+    *{
+      font-size: .22rem!important;
+      color: $color-font-middle-black;
+    }
+  }
+  &__content{
+    .el-message-box__status{
+      font-size: .3rem!important;
+    }
+    .el-message-box__message{
+      padding-left: .4rem!important;
+    }
+    *{
+      font-size: .2rem!important;
+      color: $color-font-middle-black;
+    }
+  }
+  &__btns{
+    padding: .18rem!important;
+    line-height: 0;
+    .el-button{
+      font-size: .18rem !important;
+    }
+  }
+}
+
+//通用下拉框
+.el-select-dropdown{
+  .el-select-dropdown__item{
+    color: $color-font-middle-black;
+    font-size: .18rem!important;
+    height: .45rem;
+    line-height: .45rem;
+  }
+}
+
+//日期选择器
+.el-date-picker{
+  width: 4rem!important;
+  .el-date-picker__header{
+    margin: .1rem;
+    *{
+      font-size: .22rem!important;
+    }
+    font-size: .22rem!important;
+  }
+  .el-picker-panel__content{
+    width: 3.6rem!important;
+    margin: .2rem;
+    * {
+      font-size: .18rem!important;
+    }
+    .el-date-table td{
+      height: .4rem;
+      width: .4rem;
+      padding: .05rem 0;
+      div{
+        height: .4rem;
+        padding: 0;
+      }
+      span{
+        line-height: .4rem;
+      }
+    }
+    .el-date-table th{
+      padding: 0;
+    }
+  }
+}

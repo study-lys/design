@@ -1,0 +1,185 @@
+/**
+* 常见 flex 布局
+* Author: dong xing
+* Date: 2019-02-15
+* Time: 14:33
+* Email: dong.xing@outlook.com
+*/
+
+// 取消页面滚动条
+@mixin scroll-bar{
+  overflow: auto;
+  -ms-overflow-style: none;    //IE 10+
+  overflow: -moz-scrollbars-none;    //Firefox
+  &::-webkit-scrollbar{
+    display: none;    //Safari and Chrome
+  }
+}
+
+// 横向、左对齐、上下居中
+@mixin f-rn-fs-c {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// 横向、左对齐、上下居中、换行
+@mixin f-rn-fs-cw {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// 横向、左对齐、上对齐
+@mixin f-rn-fs-cs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// 横向、右对齐、上下居中
+@mixin f-rn-fe-c {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// 横向、左右居中、上下居中
+@mixin f-rn-c-c {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+// 横向、两端对齐、上下居中
+@mixin f-rn-sb-c {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 横向、两端对齐、上对齐
+@mixin f-rn-sb-fs {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+// 横向、环绕、上下居中
+@mixin f-rn-sa-c {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// 横向、等间距、上下居中
+@mixin f-rn-se-c {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// 横向、等间距、上下居中
+@mixin f-rn-fs-fe {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+// 纵向、上对齐、左对齐
+@mixin f-cn-fs-fs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+// 纵向、下对齐、左对齐
+@mixin f-cn-fe-fs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+// 纵向、两端对齐、左对齐
+@mixin f-cn-sb-fs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+// 纵向、环绕、左对齐
+@mixin f-cn-sa-fs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+// 纵向、等间距、左对齐
+@mixin f-cn-se-fs {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+// 纵向、上对齐、左右居中
+@mixin f-cn-fs-c {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+// 纵向、下对齐、左右居中
+@mixin f-cn-fe-c {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// 纵向、两端对齐、左右居中
+@mixin f-cn-sb-c {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 纵向、环绕、左右居中
+@mixin f-cn-sa-c {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// 纵向、等间距、左右居中
+@mixin f-cn-se-c {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+// 纵向、两端对齐、拉伸
+@mixin f-cn-sb-s {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+}
